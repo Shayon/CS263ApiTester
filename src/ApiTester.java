@@ -48,16 +48,6 @@ public class ApiTester
 			System.out.print("Enter POST to post a message, GET to get chat history, or QUIT to quit.\n >");
 			userInput=reader.readLine();	
 		}
-		String message = "Hola!";
-		Gson gson = new Gson();
-		String jsonMessage=gson.toJson(message);
-		String query = String.format("message=%s", URLEncoder.encode(jsonMessage, charset));
-		
-		
-		postRequest(url, charset, query);
-		
-		//String hist=getRequest(url, charset);
-		//System.out.println(hist);
 	}
 	
 	/**
